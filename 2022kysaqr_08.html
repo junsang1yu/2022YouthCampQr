@@ -142,9 +142,9 @@ a {
     transition: 1.4s;
 }
 .card_3 .image {
-	background-image: url("https://github.com/pokou125/2022kysa_qr/blob/main/KakaoTalk_20220920_003859249.jpg?raw=true");
-    width: 300px;
-    height: auto;
+    background-image: url("https://github.com/pokou125/2022kysa_qr/blob/main/KakaoTalk_20220920_003859249.jpg?raw=true");
+    width: auto;
+    height: 180px;
     background-position: center;
 }
 .card_3 h2{
@@ -194,15 +194,7 @@ a {
             <div class="card card_1" id="card1">
                 <div class="image"></div>
                 <h2>암호를 입력하세요</h2>
-                <p>"다음 중 우리가 야영하는 장소 이름은 무엇일까요?"
-				<br><br>
-                    1. 한일장
-				<br><br>
-                    2. 한영장
-				<br><br>
-                    3. 한미장
-				<br><br>
-				</p>
+                <p>"무릇 사람이 (     )하고서는 구원받음이 불가능하니라."</p>
                 <div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><div class="confirm" onclick="QnAnswer()">확인</div></div>
                 
             </div>
@@ -305,7 +297,7 @@ a {
             }
         }
 
-        var password = "한미장";
+        var password = "무지";
         function QnAnswer(){
             
             if(AnswerInput.value == password){
