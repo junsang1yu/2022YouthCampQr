@@ -195,7 +195,15 @@ a {
             <div class="card card_1" id="card1">
                 <div class="image"></div>
                 <h2>암호를 입력하세요</h2>
-                <p>"무릇 사람이 (     )하고서는 구원받음이 불가능하니라."</p>
+                <p>"다음 중 우리가 야영하는 장소 이름은 무엇일까요?"
+				<br>
+                    1. 한일장
+				<br><br>
+                    2. 한영장
+				<br><br>
+                    3. 한미장
+				<br><br>
+				</p>
                 <div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><div class="confirm" onclick="QnAnswer()">확인</div></div>
                 
             </div>
@@ -298,7 +306,7 @@ a {
             }
         }
 
-        var password = "무지";
+        var password = "한미장";
         function QnAnswer(){
             
             if(AnswerInput.value == password){
