@@ -204,6 +204,35 @@ a {
     transform: translateX(-50%) scale(1) ;
 }
 
+/* CARD 5 */
+.card_5 {
+    background: #f6f6f6;
+    transform: translateX(-50%) scale(2);
+    margin: -1200px 1000px;
+    transition: 1.4s;
+}
+.card_5 .image {
+    background-position: center;
+}
+
+.card_5 .answer{
+    text-align: center;
+}
+
+.card_5 h2{
+    color: #e8672e
+}
+.card_5 .next{
+    color: #e8672e;
+}
+.card_5 .prev{
+    color: #e8672e;
+}
+.card_5.active{
+    margin: 0;
+    transform: translateX(-50%) scale(1) ;
+}
+
 </style>
 <body>
     <div id="container">
@@ -238,8 +267,8 @@ a {
                 <p>
                 </p>
 				<div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><div class="confirm" onclick="QnAnswer()">확인</div></div>
-				<p>
-                </p>
+				<br>
+				<br>
 				<div class="prev" onclick="prev()">PREV</div>
             </div>
 
@@ -268,8 +297,8 @@ a {
                 <p>
                 </p>
 				<div class="answer"><input id="answerIn2" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer2()}"><br><br><div class="confirm" onclick="QnAnswer2()">확인</div></div>
-				<p>
-                </p>
+				<br>
+				<br>
 				<div class="prev" onclick="prev()">PREV</div>
             </div>
 
@@ -294,9 +323,19 @@ a {
                 <p>
                 </p>
 				<div class="answer"><input id="answerIn3" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer3()}"><div class="confirm" onclick="QnAnswer3()">확인</div></div>
-				<p>
-                </p>
+				<br>
+				<br>
 				<div class="prev" onclick="prev()">PREV</div>
+            </div>
+			
+			<!-- Card 5 -->
+            <div class="card card_5" id="card5">
+                <h2>확인 받으러 가자!</h2>
+                <p>미션을 완료하시고 해당 부스로 가서 확인받으세요!
+                    <br>
+                    <br>빙고를 완성하면 <br> 상품 뽑기도 할 수 있답니다!!!
+                </p>
+                <div class="prev" onclick="prev()">PREV</div>
             </div>
 
         </div>
@@ -307,13 +346,14 @@ a {
             card2 = document.getElementById("card2"),
             card3 = document.getElementById("card3"),
             card4 = document.getElementById("card4"),
+			card4 = document.getElementById("card5"),
             card_length = document.querySelectorAll(".card");
 
         // container
         let container = document.getElementById("container");
 
         // Card List
-        let card_list = [card1, card2, card3, card4];
+        let card_list = [card1, card2, card3, card4, card5];
 
         var AnswerInput = document.querySelector('#answerIn');
 		var AnswerInput2 = document.querySelector('#answerIn2');
@@ -357,6 +397,9 @@ a {
                 container.style.background = "#8b8b8b";
             }
             else if (x == 3) {
+                container.style.background = "#e8672e"
+            }
+			else if (x == 4) {
                 container.style.background = "#e8672e"
             }
         }
