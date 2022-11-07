@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="#">
     <title>Document</title>
 </head>
 <style>
@@ -67,12 +68,6 @@ a {
     cursor: pointer !important;
     color: #7c4019 !important;
 }
-.card_1 p{
-    margin-bottom: 6px !important;
-}
-.card_1 .answer{
-    text-align: center;
-}
 .next {
     position: absolute;
     bottom: 50px;
@@ -93,9 +88,11 @@ a {
     background: #f6f6f6;
     transition: 1s;
 }
+
 .card_1 .image{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Eo_circle_orange_number-3.svg/512px-Eo_circle_orange_number-3.svg.png?20200417161714");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Eo_circle_orange_number-3.svg/512px-Eo_circle_orange_number-2.svg.png?20200417161704");
 }
+
 .card_1 h2 {
     color: #ac5422;
 }
@@ -105,21 +102,35 @@ a {
 .card_1 .prev{
     color: #ac5422;
 }
+
+.card_1 p{
+    margin-bottom: 6px !important;
+}
+.card_1 .answer{
+    text-align: center;
+}
+
 /* CARD 2 */
 .card_2 {
     background: #f6f6f6;
     transform: translateX(-50%) scale(2);
-    margin: 1200px;
-    opacity: 0;
+    margin: -1200px;
     transition: 1.4s;
 }
 .card_2 .image{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Eo_circle_orange_number-3.svg/512px-Eo_circle_orange_number-3.svg.png?20200417161714");
-    width: 200px;
-    height: 175px;
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_3_1.jpg?raw=true");
+	width: 300px;
+    height: 300px;
+    background-position: center;
+	<!-- width: 200px; -->
+    <!-- height: 175px; -->
 }
 .card_2 h2{
     color: #7c4019
+}
+
+.card_2 .answer{
+    text-align: center;
 }
 .card_2 .next{
     color: #7c4019;
@@ -128,7 +139,6 @@ a {
     color: #7c4019;
 }
 .card_2.active{
-    opacity: 1;
     margin: 0;
     transform: translateX(-50%) scale(1) ;
 }
@@ -142,13 +152,17 @@ a {
     transition: 1.4s;
 }
 .card_3 .image {
-    
-    width: auto;
-    height: auto;
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_3_2.jpg?raw=true");
+    width: 300px;
+    height: 300px;
     background-position: center;
 }
 .card_3 h2{
     color: #8b8b8b
+}
+
+.card_3 .answer{
+    text-align: center;
 }
 .card_3 .next{
     color: #8b8b8b;
@@ -169,9 +183,16 @@ a {
     transition: 1.4s;
 }
 .card_4 .image {
-    margin-bottom: 0;
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_3_3.jpg?raw=true");
+	width: 300px;
+    height: 300px;
     background-position: center;
 }
+
+.card_4 .answer{
+    text-align: center;
+}
+
 .card_4 h2{
     color: #e8672e
 }
@@ -186,55 +207,85 @@ a {
     transform: translateX(-50%) scale(1) ;
 }
 
+/* CARD 5 */
+.card_5 {
+    background: #f6f6f6;
+    transform: translateX(-50%) scale(2);
+    margin: -1200px 1000px;
+    transition: 1.4s;
+}
+.card_5 .image {
+    background-position: center;
+}
+
+.card_5 .answer{
+    text-align: center;
+}
+
+.card_5 h2{
+    color: #e8672e
+}
+.card_5 .next{
+    color: #e8672e;
+}
+.card_5 .prev{
+    color: #e8672e;
+}
+.card_5.active{
+    margin: 0;
+    transform: translateX(-50%) scale(1) ;
+}
+
 </style>
 <body>
     <div id="container">
         <div class="container_boxes">
-            <!-- Card 1 -->
-            <div class="card card_1" id="card1">
-                <div class="image"></div>
-                <h2>암호를 입력하세요</h2>
-                <p>"또 모든 일이 지혜와 질서 안에서 행해지도록 할지니, 이는 사람이 그가 가진 힘보다 더 빨리 달음질함이 요구되지 아니함이라. 그리고 또 그는 부지런할 필요가 있나니, 그로써 그가 상을 얻으리라. 그러므로 모든 일은 반드시 (       ) 안에서 행해져야 하느니라"</p>
-                <div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><div class="confirm" onclick="QnAnswer()">확인</div></div>
-                
+            <!-- Card 1 -->			
+			<div class="card card_1" id="card1">
+				<div class="image"></div>
+				<h2>위로</h2>
+                <p>"그분은 여러분을 위로해 주실 것입니다."</p>
+				<p>
+				</p>
+				<div class="next" onclick="next()">NEXT</div>
             </div>
 
             <!-- Card 2 -->
             <div class="card card_2" id="card2">
                 <div class="image"></div>
-                <h2>이 화면을 캡처하세요</h2>
-                <p> *주의 : 'next'를 눌러 미션을 확인하기 전에 이 화면을 캡처하세요. 
-                    부스에서 해당 화면을 보여주어야 확인 혹은 미션수행이 가능합니다.
-                </p>
-                <div class="prev" onclick="prev()">PREV</div>
-                <div class="next" onclick="next()">NEXT</div>
+				<h2>암호를 입력하세요</h2>
+				<br>
+				<div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><br><br><div class="confirm" onclick="QnAnswer()">확인</div></div>
+				
             </div>
 
             <!-- Card 3 -->
-            <div class="card card_3" id="card3">
+			<div class="card card_3" id="card3">
                 <div class="image"></div>
-                <h2>질서있게 배열하기</h2>
-                <p><a>질문의 답이 작은 순에서 큰 순이 되도록 질문을 배열하세요. </a><br>      
-                    - 질문 1. 요나가 물고기 배 속에 있었던 날의 수 
-                    <br>- 질문 2. 다윗이 가져온 매끄러운 돌의 수
-                    <br>- 질문 3. 요시야가 왕이 되었던 나이의 절반
-                    <br>- 질문 4. 십계명이 기록된 돌판 수
-                    <br>- 질문 5. 나아만이 요단강에서 몸을 씻어야 했던 횟수
-
-                    <br><br><a>통과 조건: 순서대로 나열하여 확인받으면 통과!</a>
-                </p>
-                    
-                <div class="prev" onclick="prev()">PREV</div>
-                <div class="next" onclick="next()">NEXT</div>
+                <h2>암호를 입력하세요</h2>
+				<br>
+				<div class="answer"><input id="answerIn2" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer2()}"><br><br><div class="confirm" onclick="QnAnswer2()">확인</div></div>
+				
             </div>
 
-            <!-- Card 3 -->
-            <div class="card card_4" id="card4">
-                <h2>확인 받으러 가자!</h2>
-                <p>미션을 완료하시고 해당 부스로 가서 확인받으세요!
+            <!-- Card 4 -->
+			<div class="card card_4" id="card4">
+                <div class="image"></div>
+                <h2>암호를 입력하세요</h2>
+				<br>
+				<div class="answer"><input id="answerIn3" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer3()}"><br><br><div class="confirm" onclick="QnAnswer3()">확인</div></div>
+				
+            </div>
+			
+			<!-- Card 5 -->
+            <div class="card card_5" id="card5">
+				<p>
+                <h2>미션완료!</h2>
+				</p>
+                <!-- <p>미션을 완료하시고 해당 부스로 가서 확인받으세요!
                     <br>
                     <br>빙고를 완성하면 <br> 상품 뽑기도 할 수 있답니다!!!
-                </p>
+                </p> -->
                 <div class="prev" onclick="prev()">PREV</div>
             </div>
 
@@ -246,15 +297,18 @@ a {
             card2 = document.getElementById("card2"),
             card3 = document.getElementById("card3"),
             card4 = document.getElementById("card4"),
+			card5 = document.getElementById("card5"),
             card_length = document.querySelectorAll(".card");
 
         // container
         let container = document.getElementById("container");
 
         // Card List
-        let card_list = [card1, card2, card3, card4];
+        let card_list = [card1, card2, card3, card4, card5];
 
         var AnswerInput = document.querySelector('#answerIn');
+		var AnswerInput2 = document.querySelector('#answerIn2');
+		var AnswerInput3 = document.querySelector('#answerIn3');
 
         // next function
         let counter = 1;
@@ -296,20 +350,47 @@ a {
             else if (x == 3) {
                 container.style.background = "#e8672e"
             }
+			else if (x == 4) {
+                container.style.background = "#e8672e"
+            }
         }
 
-        var password = "질서";
+        var password  = "파";
+		var password2 = "수박";
+		var password3 = "melon";
         function QnAnswer(){
             
             if(AnswerInput.value == password){
                 next();
             }else{
-                var wrongResult = "정답이 아닙니다ㅠㅠㅠ\n **띄어쓰기는 없습니다**";
+                var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
                 alert(wrongResult);
             }
 
         }
-        
+		
+		function QnAnswer2(){
+            
+            if(AnswerInput2.value == password2){
+                next();
+            }else{
+                var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
+                alert(wrongResult);
+            }
+
+        }
+		
+		function QnAnswer3(){
+            
+            if(AnswerInput3.value == password3){
+                next();
+            }else{
+                var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
+                alert(wrongResult);
+            }
+
+        }
+
         var KysaDday = new Date('2022-09-23 15:25:00');
         var today = new Date();
 
@@ -325,7 +406,5 @@ a {
             console.log("아직 시작 안돼!");
 
         }
-
-        
 </script>
 </html>
