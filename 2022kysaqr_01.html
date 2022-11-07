@@ -67,12 +67,6 @@ a {
     cursor: pointer !important;
     color: #7c4019 !important;
 }
-.card_1 p{
-    margin-bottom: 6px !important;
-}
-.card_1 .answer{
-    text-align: center;
-}
 .next {
     position: absolute;
     bottom: 50px;
@@ -93,9 +87,11 @@ a {
     background: #f6f6f6;
     transition: 1s;
 }
+
 .card_1 .image{
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Eo_circle_orange_number-1.svg/512px-Eo_circle_orange_number-1.svg.png?20200417161654");
 }
+
 .card_1 h2 {
     color: #ac5422;
 }
@@ -105,12 +101,22 @@ a {
 .card_1 .prev{
     color: #ac5422;
 }
+
+.card_1 p{
+    margin-bottom: 6px !important;
+}
+.card_1 .answer{
+    text-align: center;
+}
+
 /* CARD 2 */
 .card_2 {
-    background: #f6f6f6;
+<!--     background: #f6f6f6;
     transform: translateX(-50%) scale(2);
     margin: -1200px;
-    transition: 1.4s;
+    transition: 1.4s; -->
+	background: #f6f6f6;
+    transition: 1s;
 }
 .card_2 .image{
     background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_1.jpg?raw=true");
@@ -141,10 +147,12 @@ a {
 
 /* CARD 3 */
 .card_3 {
-    background: #f6f6f6;
+<!--     background: #f6f6f6;
     transform: translateX(-50%) scale(2);
     margin: -1200px;
-    transition: 1.4s;
+    transition: 1.4s; -->
+	background: #f6f6f6;
+    transition: 1s;
 }
 .card_3 .image {
     background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_2.jpg?raw=true");
@@ -172,10 +180,12 @@ a {
 
 /* CARD 4 */
 .card_4 {
-    background: #f6f6f6;
+<!--     background: #f6f6f6;
     transform: translateX(-50%) scale(2);
     margin: -1200px 1000px;
-    transition: 1.4s;
+    transition: 1.4s; -->
+	background: #f6f6f6;
+    transition: 1s;
 }
 .card_4 .image {
     background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_3.jpg?raw=true");
@@ -204,10 +214,12 @@ a {
 
 /* CARD 5 */
 .card_5 {
-    background: #f6f6f6;
+<!--     background: #f6f6f6;
     transform: translateX(-50%) scale(2);
     margin: -1200px 1000px;
-    transition: 1.4s;
+    transition: 1.4s; -->
+	background: #f6f6f6;
+    transition: 1s;
 }
 .card_5 .image {
     background-position: center;
@@ -257,8 +269,8 @@ a {
                 <div class="image"></div>
 				<h2>암호를 입력하세요</h2>
 				<div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><div class="confirm" onclick="QnAnswer()">확인</div></div>
+				<div class="prev" onclick="prev()">PREV</div>
             </div>
-			<div class="prev" onclick="prev()">PREV</div>
 
             <!-- Card 3 -->
 			<div class="card card_3" id="card3">
