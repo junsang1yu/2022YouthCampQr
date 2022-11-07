@@ -116,7 +116,7 @@ a {
 .card_2 .image{
     background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_1.jpg?raw=true");
 	width: auto;
-    height: 180px;
+    height: auto;
     background-position: center;
 	<!-- width: 200px; -->
     <!-- height: 175px; -->
@@ -216,7 +216,7 @@ a {
 
             <!-- Card 2 -->
             <div class="card card_2" id="card2">
-				<h2>답을 적은 후 확인을 눌러주세요</h2>
+				<p>답을 적은 후 확인을 눌러주세요</p>
                 <div class="image"></div>
                 <!-- <h2>이 화면을 캡처하세요</h2>
                 <p> *주의 : 'next'를 눌러 미션을 확인하기 전에 이 화면을 캡처하세요. 
@@ -225,9 +225,6 @@ a {
                 <div class="prev" onclick="prev()">PREV</div>
                 <div class="next" onclick="next()">NEXT</div> -->
                 <p>
-                    <br>
-                    <br><br><a></a>
-                    <br><a></a>
                 </p>
 				<div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><div class="confirm" onclick="QnAnswer()">확인</div></div>
 				<p>
