@@ -260,7 +260,7 @@ a {
                 <div class="next" onclick="next()">NEXT</div> -->
                 <p>
                 </p>
-				<div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer2()}"><div class="confirm" onclick="QnAnswer2()">확인</div></div>
+				<div class="answer2"><input id="answerIn2" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer2()}"><div class="confirm" onclick="QnAnswer2()">확인</div></div>
 				<p>
 				</p>
 				<div class="prev" onclick="prev()">PREV</div>
@@ -293,6 +293,7 @@ a {
         let card_list = [card1, card2, card3, card4];
 
         var AnswerInput = document.querySelector('#answerIn');
+		var AnswerInput2 = document.querySelector('#answerIn2');
 
         // next function
         let counter = 1;
@@ -351,7 +352,7 @@ a {
 		
 		function QnAnswer2(){
             
-            if(AnswerInput.value == password2){
+            if(AnswerInput2.value == password2){
                 next();
             }else{
                 var wrongResult = "정답이 아닙니다ㅠㅠㅠ\n **띄어쓰기는 없습니다**";
