@@ -106,43 +106,31 @@ a {
     color: #ac5422;
 }
 /* CARD 2 */
-.card_2 p{
-    margin-bottom: 6px !important;
-}
-.card_2 .answer{
-    text-align: center;
-}
-.next {
-    position: absolute;
-    bottom: 50px;
-    right: 40px;
-    font-weight: 500;
-    cursor: pointer;
-}
-.prev {
-    position: absolute;
-    bottom: 50px;
-    left: 40px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-/* CARD 2 */
-.card_1 {
+.card_2 {
     background: #f6f6f6;
-    transition: 1s;
+    transform: translateX(-50%) scale(2);
+    margin: 1200px;
+    opacity: 0;
+    transition: 1.4s;
 }
 .card_2 .image{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Eo_circle_orange_number-3.svg/512px-Eo_circle_orange_number-3.svg.png?20200417161714");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Eo_circle_orange_number-1.svg/512px-Eo_circle_orange_number-1.svg.png?20200417161654");
+    width: 200px;
+    height: 175px;
 }
-.card_1 h2 {
-    co2or: #ac5422;
+.card_2 h2{
+    color: #7c4019
 }
 .card_2 .next{
-    color: #ac5422;
+    color: #7c4019;
 }
 .card_2 .prev{
-    color: #ac5422;
+    color: #7c4019;
+}
+.card_2.active{
+    opacity: 1;
+    margin: 0;
+    transform: translateX(-50%) scale(1) ;
 }
 
 
@@ -205,24 +193,23 @@ a {
             <!-- Card 1 -->
             <div class="card card_1" id="card1">
                 <div class="image"></div>
-                <h2>강화</h2>
-                <p>"예수 그리스도께서는 여러분을 강화하실 수 있습니다."</p>
-                <!-- <div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><div class="confirm" onclick="QnAnswer()">확인</div></div> -->
-				<div></div>
-				<p>
-				</P>
-                <div class="next" onclick="next()">NEXT</div>
+                <h2>암호를 입력하세요! 청소년 여러분</h2>
+                <p>"하나님이 지으신 그 모든 것을 보시니 보시기에 심히 (      ) 저녁이 되고 아침이 되니 이는 여섯째 날이니라"</p>
+                <div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><div class="confirm" onclick="QnAnswer()">확인</div></div>
                 
             </div>
 
             <!-- Card 2 -->
-			<div class="card card_2" id="card2">
+            <div class="card card_2" id="card2">
                 <div class="image"></div>
-                <h2>암호를 입력하세요</h2>
-                <p>"또 모든 일이 지혜와 질서 안에서 행해지도록 할지니, 이는 사람이 그가 가진 힘보다 더 빨리 달음질함이 요구되지 아니함이라. 그리고 또 그는 부지런할 필요가 있나니, 그로써 그가 상을 얻으리라. 그러므로 모든 일은 반드시 (       ) 안에서 행해져야 하느니라"</p>
-                <div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><div class="confirm" onclick="QnAnswer()">확인</div></div>
+                <h2>이 화면을 캡처하세요</h2>
+                <p> *주의 : 'next'를 눌러 미션을 확인하기 전에 이 화면을 캡처하세요. 
+                    부스에서 해당 화면을 보여주어야 확인 혹은 미션수행이 가능합니다.
+                </p>
+                <div class="prev" onclick="prev()">PREV</div>
+                <div class="next" onclick="next()">NEXT</div>
             </div>
-			
+
             <!-- Card 3 -->
             <div class="card card_3" id="card3">
                 <div class="image"></div>
@@ -306,7 +293,7 @@ a {
             }
         }
 
-        var password = "질서";
+        var password = "좋았더라";
         function QnAnswer(){
             
             if(AnswerInput.value == password){
