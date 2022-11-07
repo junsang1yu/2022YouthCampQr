@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="#">
     <title>Document</title>
 </head>
 <style>
@@ -67,12 +68,6 @@ a {
     cursor: pointer !important;
     color: #7c4019 !important;
 }
-.card_1 p{
-    margin-bottom: 6px !important;
-}
-.card_1 .answer{
-    text-align: center;
-}
 .next {
     position: absolute;
     bottom: 50px;
@@ -93,9 +88,11 @@ a {
     background: #f6f6f6;
     transition: 1s;
 }
+
 .card_1 .image{
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Eo_circle_orange_number-2.svg/512px-Eo_circle_orange_number-2.svg.png?20200417161704");
 }
+
 .card_1 h2 {
     color: #ac5422;
 }
@@ -105,21 +102,35 @@ a {
 .card_1 .prev{
     color: #ac5422;
 }
+
+.card_1 p{
+    margin-bottom: 6px !important;
+}
+.card_1 .answer{
+    text-align: center;
+}
+
 /* CARD 2 */
 .card_2 {
     background: #f6f6f6;
     transform: translateX(-50%) scale(2);
-    margin: 1200px;
-    opacity: 0;
+    margin: -1200px;
     transition: 1.4s;
 }
 .card_2 .image{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Eo_circle_orange_number-2.svg/512px-Eo_circle_orange_number-2.svg.png?20200417161704");
-    width: 200px;
-    height: 175px;
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_2_1.jpg?raw=true");
+	width: 300px;
+    height: 300px;
+    background-position: center;
+	<!-- width: 200px; -->
+    <!-- height: 175px; -->
 }
 .card_2 h2{
     color: #7c4019
+}
+
+.card_2 .answer{
+    text-align: center;
 }
 .card_2 .next{
     color: #7c4019;
@@ -128,7 +139,6 @@ a {
     color: #7c4019;
 }
 .card_2.active{
-    opacity: 1;
     margin: 0;
     transform: translateX(-50%) scale(1) ;
 }
@@ -142,12 +152,17 @@ a {
     transition: 1.4s;
 }
 .card_3 .image {
-    width: auto;
-    height: auto;
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_2_2.jpg?raw=true");
+    width: 300px;
+    height: 300px;
     background-position: center;
 }
 .card_3 h2{
     color: #8b8b8b
+}
+
+.card_3 .answer{
+    text-align: center;
 }
 .card_3 .next{
     color: #8b8b8b;
@@ -168,9 +183,16 @@ a {
     transition: 1.4s;
 }
 .card_4 .image {
-    margin-bottom: 0;
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_2_3.jpg?raw=true");
+	width: 300px;
+    height: 300px;
     background-position: center;
 }
+
+.card_4 .answer{
+    text-align: center;
+}
+
 .card_4 h2{
     color: #e8672e
 }
@@ -185,46 +207,78 @@ a {
     transform: translateX(-50%) scale(1) ;
 }
 
+/* CARD 5 */
+.card_5 {
+    background: #f6f6f6;
+    transform: translateX(-50%) scale(2);
+    margin: -1200px 1000px;
+    transition: 1.4s;
+}
+.card_5 .image {
+    background-position: center;
+}
+
+.card_5 .answer{
+    text-align: center;
+}
+
+.card_5 h2{
+    color: #e8672e
+}
+.card_5 .next{
+    color: #e8672e;
+}
+.card_5 .prev{
+    color: #e8672e;
+}
+.card_5.active{
+    margin: 0;
+    transform: translateX(-50%) scale(1) ;
+}
+
 </style>
 <body>
     <div id="container">
         <div class="container_boxes">
-            <!-- Card 1 -->
-            <div class="card card_1" id="card1">
-                <div class="image"></div>
-                <h2>암호를 입력하세요</h2>
-                <p>"그러므로 내가 이 백성 중에 (      )한 일 곧 (       )하고 가장 (       )한 일을 다시 행하리니 그들 중에서 지혜자의 지혜가 없어지고 명철자의 총명이 가려지리라"</p>
-                <div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><div class="confirm" onclick="QnAnswer()">확인</div></div>
-                
+            <!-- Card 1 -->			
+			<div class="card card_1" id="card1">
+				<div class="image"></div>
+				<h2>강화</h2>
+                <p>"예수그리스도께서는 여러분을 강화하실 수 있습니다."</p>
+				<p>
+				</p>
+				<div class="next" onclick="next()">NEXT</div>
             </div>
 
             <!-- Card 2 -->
             <div class="card card_2" id="card2">
                 <div class="image"></div>
-                <h2>이 화면을 캡처하세요</h2>
-                <p> *주의 : 'next'를 눌러 미션을 확인하기 전에 이 화면을 캡처하세요. 
-                    부스에서 해당 화면을 보여주어야 확인 혹은 미션수행이 가능합니다.
-                </p>
-                <div class="prev" onclick="prev()">PREV</div>
-                <div class="next" onclick="next()">NEXT</div>
+				<h2>암호를 입력하세요</h2>
+				<br>
+				<div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><br><br><div class="confirm" onclick="QnAnswer()">확인</div></div>
+				
             </div>
 
             <!-- Card 3 -->
-            <div class="card card_3" id="card3">
+			<div class="card card_3" id="card3">
                 <div class="image"></div>
-                <h2>경전 번역하기</h2>
-                <p>조셉스미스가 몰몬경을 번역하는 작업은 결코 쉽지 않은 작업이었습니다. 조셉스미스는 하나님의 은사와 권능으로 몰몬경을 번역했고, 그 과정에서 연구와 기도 또한 필요했습니다. 여러분도 힌트를 통해 경전 구절을 번역해보세요. <br>                    
-                    <img src= "https://github.com/pokou125/2022kysa_qr/blob/main/dsafdsadaf.png?raw=true"/>
-                    
-                    <br><br><a>통과 조건: 번역한 내용 읽어서 맞으면 통과</a>
-                </p>
-                
-                <div class="prev" onclick="prev()">PREV</div>
-                <div class="next" onclick="next()">NEXT</div>
+                <h2>암호를 입력하세요</h2>
+				<br>
+				<div class="answer"><input id="answerIn2" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer2()}"><br><br><div class="confirm" onclick="QnAnswer2()">확인</div></div>
+				
             </div>
 
-            <!-- Card 3 -->
-            <div class="card card_4" id="card4">
+            <!-- Card 4 -->
+			<div class="card card_4" id="card4">
+                <div class="image"></div>
+                <h2>암호를 입력하세요</h2>
+				<br>
+				<div class="answer"><input id="answerIn3" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer3()}"><br><br><div class="confirm" onclick="QnAnswer3()">확인</div></div>
+				
+            </div>
+			
+			<!-- Card 5 -->
+            <div class="card card_5" id="card5">
                 <h2>확인 받으러 가자!</h2>
                 <p>미션을 완료하시고 해당 부스로 가서 확인받으세요!
                     <br>
@@ -241,15 +295,18 @@ a {
             card2 = document.getElementById("card2"),
             card3 = document.getElementById("card3"),
             card4 = document.getElementById("card4"),
+			card5 = document.getElementById("card5"),
             card_length = document.querySelectorAll(".card");
 
         // container
         let container = document.getElementById("container");
 
         // Card List
-        let card_list = [card1, card2, card3, card4];
+        let card_list = [card1, card2, card3, card4, card5];
 
         var AnswerInput = document.querySelector('#answerIn');
+		var AnswerInput2 = document.querySelector('#answerIn2');
+		var AnswerInput3 = document.querySelector('#answerIn3');
 
         // next function
         let counter = 1;
@@ -291,15 +348,42 @@ a {
             else if (x == 3) {
                 container.style.background = "#e8672e"
             }
+			else if (x == 4) {
+                container.style.background = "#e8672e"
+            }
         }
 
-        var password = "기이";
+        var password  = "소풍";
+		var password2 = "병아리";
+		var password3 = "개나리";
         function QnAnswer(){
             
             if(AnswerInput.value == password){
                 next();
             }else{
-                var wrongResult = "정답이 아닙니다ㅠㅠㅠ\n **띄어쓰기는 없습니다**";
+                var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
+                alert(wrongResult);
+            }
+
+        }
+		
+		function QnAnswer2(){
+            
+            if(AnswerInput2.value == password2){
+                next();
+            }else{
+                var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
+                alert(wrongResult);
+            }
+
+        }
+		
+		function QnAnswer3(){
+            
+            if(AnswerInput3.value == password3){
+                next();
+            }else{
+                var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
                 alert(wrongResult);
             }
 
