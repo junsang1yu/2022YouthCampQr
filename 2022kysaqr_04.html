@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="#">
     <title>Document</title>
 </head>
 <style>
@@ -67,12 +68,6 @@ a {
     cursor: pointer !important;
     color: #7c4019 !important;
 }
-.card_1 p{
-    margin-bottom: 6px !important;
-}
-.card_1 .answer{
-    text-align: center;
-}
 .next {
     position: absolute;
     bottom: 50px;
@@ -93,9 +88,11 @@ a {
     background: #f6f6f6;
     transition: 1s;
 }
+
 .card_1 .image{
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Eo_circle_orange_number-4.svg/512px-Eo_circle_orange_number-4.svg.png?20200417161724");
 }
+
 .card_1 h2 {
     color: #ac5422;
 }
@@ -105,21 +102,35 @@ a {
 .card_1 .prev{
     color: #ac5422;
 }
+
+.card_1 p{
+    margin-bottom: 6px !important;
+}
+.card_1 .answer{
+    text-align: center;
+}
+
 /* CARD 2 */
 .card_2 {
     background: #f6f6f6;
     transform: translateX(-50%) scale(2);
-    margin: 1200px;
-    opacity: 0;
+    margin: -1200px;
     transition: 1.4s;
 }
 .card_2 .image{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Eo_circle_orange_number-4.svg/512px-Eo_circle_orange_number-4.svg.png?20200417161724");
-    width: 200px;
-    height: 175px;
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_1_1.jpg?raw=true");
+	width: 300px;
+    height: 300px;
+    background-position: center;
+	<!-- width: 200px; -->
+    <!-- height: 175px; -->
 }
 .card_2 h2{
     color: #7c4019
+}
+
+.card_2 .answer{
+    text-align: center;
 }
 .card_2 .next{
     color: #7c4019;
@@ -128,7 +139,6 @@ a {
     color: #7c4019;
 }
 .card_2.active{
-    opacity: 1;
     margin: 0;
     transform: translateX(-50%) scale(1) ;
 }
@@ -142,13 +152,17 @@ a {
     transition: 1.4s;
 }
 .card_3 .image {
-    background-image: url("https://assets.ldscdn.org/0c/47/0c47b718402ac4a943cab27f75d690c1918311c2/seoul_korea_temple_lds.png");
-    width: auto;
-    height : 150px;
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_1_2.jpg?raw=true");
+    width: 300px;
+    height: 300px;
     background-position: center;
 }
 .card_3 h2{
     color: #8b8b8b
+}
+
+.card_3 .answer{
+    text-align: center;
 }
 .card_3 .next{
     color: #8b8b8b;
@@ -169,9 +183,16 @@ a {
     transition: 1.4s;
 }
 .card_4 .image {
-    margin-bottom: 0;
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_1_3.jpg?raw=true");
+	width: 300px;
+    height: 300px;
     background-position: center;
 }
+
+.card_4 .answer{
+    text-align: center;
+}
+
 .card_4 h2{
     color: #e8672e
 }
@@ -186,51 +207,86 @@ a {
     transform: translateX(-50%) scale(1) ;
 }
 
+/* CARD 5 */
+.card_5 {
+    background: #f6f6f6;
+    transform: translateX(-50%) scale(2);
+    margin: -1200px 1000px;
+    transition: 1.4s;
+}
+.card_5 .image {
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_1_4.jpg?raw=true");
+    width: 300px;
+    height: 300px;
+    background-position: center;
+}
+
+.card_5 .answer{
+    text-align: center;
+}
+
+.card_5 h2{
+    color: #e8672e
+}
+.card_5 .next{
+    color: #e8672e;
+}
+.card_5 .prev{
+    color: #e8672e;
+}
+.card_5.active{
+    margin: 0;
+    transform: translateX(-50%) scale(1) ;
+}
+
 </style>
 <body>
     <div id="container">
         <div class="container_boxes">
-            <!-- Card 1 -->
-            <div class="card card_1" id="card1">
-                <div class="image"></div>
-                <h2>암호를 입력하세요</h2>
-                <p>"그리고 나의 백성이 주의 이름으로 나를 위하여 집 한 채를 짓고 어떠한 부정한 것도 그 안에 들어옴을 용납하지 아니하여 그 집이 더럽혀지지 않게 하는 만큼, 나의 영광이 그 위에 머물 것이요, 참으로 나의 임재가 그 곳에 있으리니, 이는 내가 그 안에 들어 갈 것임이라. 그리고 그 안에 들어 올 자로서 마음이 (      )한 자는 모두 하나님을 보리라. 그러나 그 집이 더럽혀지면, 나는 그 안에 들어가지 아니할 것이요, 나의 영광도 그 곳에 있지 아니하리니, 이는 내가 거룩하지 아니한 성전에는 들어가지 아니할 것임이니라."</p>
-                <div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><div class="confirm" onclick="QnAnswer()">확인</div></div>
-                
+            <!-- Card 1 -->			
+			<div class="card card_1" id="card1">
+				<div class="image"></div>
+				<h2>결정</h2>
+                <p>"하나님 아버지에 대한 사랑이 삶에서 가장 큰 영향을 미친다면, 많은 결정이 쉬워집니다."</p>
+				<p>
+				</p>
+				<div class="next" onclick="next()">NEXT</div>
             </div>
 
             <!-- Card 2 -->
             <div class="card card_2" id="card2">
                 <div class="image"></div>
-                <h2>이 화면을 캡처하세요</h2>
-                <p> *주의 : 'next'를 눌러 미션을 확인하기 전에 이 화면을 캡처하세요. 
-                    부스에서 해당 화면을 보여주어야 확인 혹은 미션수행이 가능합니다.
-                </p>
-                <div class="prev" onclick="prev()">PREV</div>
-                <div class="next" onclick="next()">NEXT</div>
+				<h2>암호를 입력하세요</h2>
+				<br>
+				<div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><br><br><div class="confirm" onclick="QnAnswer()">확인</div></div>
+				
             </div>
 
             <!-- Card 3 -->
-            <div class="card card_3" id="card3">
+			<div class="card card_3" id="card3">
                 <div class="image"></div>
-                <h2>서울성전 그려보기</h2>
-                <p>서울성전 모래사장에 그려서 사진찍어서 확인받기 
-                    
-                    <br><br><a>통과 조건 : 그림에 꼭 있어야 할 것 - 모로나이 상, 세 개의 뾰족한 기둥</a>
-                </p>
-                    
-                <div class="prev" onclick="prev()">PREV</div>
-                <div class="next" onclick="next()">NEXT</div>
+                <h2>암호를 입력하세요</h2>
+				<br>
+				<div class="answer"><input id="answerIn2" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer2()}"><br><br><div class="confirm" onclick="QnAnswer2()">확인</div></div>
+				
             </div>
 
-            <!-- Card 3 -->
-            <div class="card card_4" id="card4">
-                <h2>확인 받으러 가자!</h2>
-                <p>미션을 완료하시고 해당 부스로 가서 확인받으세요!
-                    <br>
-                    <br>빙고를 완성하면 <br> 상품 뽑기도 할 수 있답니다!!!
+            <!-- Card 4 -->
+			<div class="card card_4" id="card4">
+                <div class="image"></div>
+                <h2>암호를 입력하세요</h2>
+				<br>
+				<div class="answer"><input id="answerIn3" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer3()}"><br><br><div class="confirm" onclick="QnAnswer3()">확인</div></div>
+				
+            </div>
+			
+			<!-- Card 5 -->
+            <div class="card card_5" id="card5">
+				<div class="image"></div>
+				<h2>활동미션!</h2>
+				<p> * 그림과 같은 포즈로 '전체' 인원이 다 나오도록 사진을 찍어서
+					  미션 점검시 고문에게 보여주세요!
                 </p>
-                <div class="prev" onclick="prev()">PREV</div>
             </div>
 
         </div>
@@ -241,15 +297,18 @@ a {
             card2 = document.getElementById("card2"),
             card3 = document.getElementById("card3"),
             card4 = document.getElementById("card4"),
+			card5 = document.getElementById("card5"),
             card_length = document.querySelectorAll(".card");
 
         // container
         let container = document.getElementById("container");
 
         // Card List
-        let card_list = [card1, card2, card3, card4];
+        let card_list = [card1, card2, card3, card4, card5];
 
         var AnswerInput = document.querySelector('#answerIn');
+		var AnswerInput2 = document.querySelector('#answerIn2');
+		var AnswerInput3 = document.querySelector('#answerIn3');
 
         // next function
         let counter = 1;
@@ -291,15 +350,42 @@ a {
             else if (x == 3) {
                 container.style.background = "#e8672e"
             }
+			else if (x == 4) {
+                container.style.background = "#e8672e"
+            }
         }
 
-        var password = "청결";
+        var password  = "소풍";
+		var password2 = "병아리";
+		var password3 = "개나리";
         function QnAnswer(){
             
             if(AnswerInput.value == password){
                 next();
             }else{
-                var wrongResult = "정답이 아닙니다ㅠㅠㅠ\n **띄어쓰기는 없습니다**";
+                var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
+                alert(wrongResult);
+            }
+
+        }
+		
+		function QnAnswer2(){
+            
+            if(AnswerInput2.value == password2){
+                next();
+            }else{
+                var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
+                alert(wrongResult);
+            }
+
+        }
+		
+		function QnAnswer3(){
+            
+            if(AnswerInput3.value == password3){
+                next();
+            }else{
+                var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
                 alert(wrongResult);
             }
 
