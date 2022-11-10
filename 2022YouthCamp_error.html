@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="#">
     <title>Document</title>
 </head>
 <style>
@@ -67,12 +68,6 @@ a {
     cursor: pointer !important;
     color: #7c4019 !important;
 }
-.card_1 p{
-    margin-bottom: 6px !important;
-}
-.card_1 .answer{
-    text-align: center;
-}
 .next {
     position: absolute;
     bottom: 50px;
@@ -93,9 +88,14 @@ a {
     background: #f6f6f6;
     transition: 1s;
 }
+
 .card_1 .image{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/58/AVL%28-25%29.png?20160313134708");
+        background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/error.jpg?raw=true");
+	width: 300px;
+    height: 300px;
+    background-position: center;
 }
+
 .card_1 h2 {
     color: #ac5422;
 }
@@ -105,21 +105,35 @@ a {
 .card_1 .prev{
     color: #ac5422;
 }
+
+.card_1 p{
+    margin-bottom: 6px !important;
+}
+.card_1 .answer{
+    text-align: center;
+}
+
 /* CARD 2 */
 .card_2 {
     background: #f6f6f6;
     transform: translateX(-50%) scale(2);
-    margin: 1200px;
-    opacity: 0;
+    margin: -1200px;
     transition: 1.4s;
 }
 .card_2 .image{
-    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/error.jpg?raw=true");
-    width: 300px;
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_1_1.jpg?raw=true");
+	width: 300px;
     height: 300px;
+    background-position: center;
+	<!-- width: 200px; -->
+    <!-- height: 175px; -->
 }
 .card_2 h2{
     color: #7c4019
+}
+
+.card_2 .answer{
+    text-align: center;
 }
 .card_2 .next{
     color: #7c4019;
@@ -128,7 +142,6 @@ a {
     color: #7c4019;
 }
 .card_2.active{
-    opacity: 1;
     margin: 0;
     transform: translateX(-50%) scale(1) ;
 }
@@ -142,13 +155,17 @@ a {
     transition: 1.4s;
 }
 .card_3 .image {
-    
-    width: auto;
-    height: auto;
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_1_2.jpg?raw=true");
+    width: 300px;
+    height: 300px;
     background-position: center;
 }
 .card_3 h2{
     color: #8b8b8b
+}
+
+.card_3 .answer{
+    text-align: center;
 }
 .card_3 .next{
     color: #8b8b8b;
@@ -169,9 +186,16 @@ a {
     transition: 1.4s;
 }
 .card_4 .image {
-    margin-bottom: 0;
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_1_3.jpg?raw=true");
+	width: 300px;
+    height: 300px;
     background-position: center;
 }
+
+.card_4 .answer{
+    text-align: center;
+}
+
 .card_4 h2{
     color: #e8672e
 }
@@ -186,48 +210,46 @@ a {
     transform: translateX(-50%) scale(1) ;
 }
 
+/* CARD 5 */
+.card_5 {
+    background: #f6f6f6;
+    transform: translateX(-50%) scale(2);
+    margin: -1200px 1000px;
+    transition: 1.4s;
+}
+.card_5 .image {
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_1_4.jpg?raw=true");
+    width: 300px;
+    height: 300px;
+    background-position: center;
+}
+
+.card_5 .answer{
+    text-align: center;
+}
+
+.card_5 h2{
+    color: #e8672e
+}
+.card_5 .next{
+    color: #e8672e;
+}
+.card_5 .prev{
+    color: #e8672e;
+}
+.card_5.active{
+    margin: 0;
+    transform: translateX(-50%) scale(1) ;
+}
+
 </style>
 <body>
     <div id="container">
         <div class="container_boxes">
-            <!-- Card 1 -->
-<!--             <div class="card card_1" id="card1">
-                <div class="image"></div>
-                <h2>암호를 입력하세요</h2>
-                <p>"내게 (   ) 자 안에서 내가 모든 것을 할 수 있느니라"</p>
-                <div class="answer"><input id="answerIn" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer()}"><div class="confirm" onclick="QnAnswer()">확인</div></div>
-                
-            </div> -->
-
-            <!-- Card 2 -->
-            <div class="card card_2" id="card2">
-                <div class="image"></div>
+            <!-- Card 1 -->			
+			<div class="card card_1" id="card1">
+				<div class="image"></div>
             </div>
-
-            <!-- Card 3 -->
-            <!-- <div class="card card_3" id="card3">
-                <div class="image"></div>
-                <h2>절대 음감</h2>
-                <p>대표자 5명을 뽑고 뽑기종이를 랜덤으로 뽑아 나온 제시어를 틀리지 않고 이어서 5명이 성공할 경우 성공! <br>                    
-
-                    <br><br><a>통과조건: 제한시간 30초안에 해야하고 중간에 틀리면 첫번째 사람부터 다시시작!</a>
-                    <br><a>**'영적/사회적' 게임 부스에서 진행되는 게임입니다. 부스를 찾아가세요!</a>
-                </p>
-                    
-                <div class="prev" onclick="prev()">PREV</div>
-                <div class="next" onclick="next()">NEXT</div>
-            </div>
- -->
-           <!--  <!-- Card 3 -->
-            <div class="card card_4" id="card4">
-                <h2>확인 받으러 가자!</h2>
-                <p>미션을 완료하시고 해당 부스로 가서 확인받으세요!
-                    <br>
-                    <br>빙고를 완성하면 <br> 상품 뽑기도 할 수 있답니다!!!
-                </p>
-                <div class="prev" onclick="prev()">PREV</div>
-            </div>
- -->
         </div>
     </div> 
 </body>
@@ -236,15 +258,18 @@ a {
             card2 = document.getElementById("card2"),
             card3 = document.getElementById("card3"),
             card4 = document.getElementById("card4"),
+			card5 = document.getElementById("card5"),
             card_length = document.querySelectorAll(".card");
 
         // container
         let container = document.getElementById("container");
 
         // Card List
-        let card_list = [card1, card2, card3, card4];
+        let card_list = [card1, card2, card3, card4, card5];
 
         var AnswerInput = document.querySelector('#answerIn');
+		var AnswerInput2 = document.querySelector('#answerIn2');
+		var AnswerInput3 = document.querySelector('#answerIn3');
 
         // next function
         let counter = 1;
@@ -286,15 +311,42 @@ a {
             else if (x == 3) {
                 container.style.background = "#e8672e"
             }
+			else if (x == 4) {
+                container.style.background = "#e8672e"
+            }
         }
 
-        var password = "능력주시는";
+        var password  = "소풍";
+		var password2 = "병아리";
+		var password3 = "개나리";
         function QnAnswer(){
             
             if(AnswerInput.value == password){
                 next();
             }else{
-                var wrongResult = "정답이 아닙니다ㅠㅠㅠ\n **띄어쓰기는 없습니다**";
+                var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
+                alert(wrongResult);
+            }
+
+        }
+		
+		function QnAnswer2(){
+            
+            if(AnswerInput2.value == password2){
+                next();
+            }else{
+                var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
+                alert(wrongResult);
+            }
+
+        }
+		
+		function QnAnswer3(){
+            
+            if(AnswerInput3.value == password3){
+                next();
+            }else{
+                var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
                 alert(wrongResult);
             }
 
