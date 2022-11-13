@@ -215,6 +215,9 @@ a {
     transition: 1.4s;
 }
 .card_5 .image {
+    background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR3_3_4.jpg?raw=true");
+	width: 300px;
+    height: 300px;
     background-position: center;
 }
 
@@ -232,6 +235,35 @@ a {
     color: #e8672e;
 }
 .card_5.active{
+    margin: 0;
+    transform: translateX(-50%) scale(1) ;
+}
+
+/* CARD 6 */
+.card_6 {
+    background: #f6f6f6;
+    transform: translateX(-50%) scale(2);
+    margin: -1200px 1000px;
+    transition: 1.4s;
+}
+.card_6 .image {
+    background-position: center;
+}
+
+.card_6 .answer{
+    text-align: center;
+}
+
+.card_6 h2{
+    color: #e8672e
+}
+.card_6 .next{
+    color: #e8672e;
+}
+.card_6 .prev{
+    color: #e8672e;
+}
+.card_6.active{
     margin: 0;
     transform: translateX(-50%) scale(1) ;
 }
@@ -280,7 +312,16 @@ a {
             </div>
 			
 			<!-- Card 5 -->
-            <div class="card card_5" id="card5">
+			<div class="card card_5" id="card5">
+                <div class="image"></div>
+                <h2>암호를 입력하세요</h2>
+				<br>
+				<div class="answer"><input id="answerIn4" style="text-align:center;" type="text" onkeyup="if(window.event.keyCode==13){QnAnswer4()}"><br><br><div class="confirm" onclick="QnAnswer4()">확인</div></div>
+				
+            </div>
+			
+			<!-- Card 6 -->
+            <div class="card card_6" id="card6">
 				<p>
                 <h2>미션완료!</h2>
 				</p>
@@ -300,17 +341,19 @@ a {
             card3 = document.getElementById("card3"),
             card4 = document.getElementById("card4"),
 			card5 = document.getElementById("card5"),
+			card5 = document.getElementById("card6"),
             card_length = document.querySelectorAll(".card");
 
         // container
         let container = document.getElementById("container");
 
         // Card List
-        let card_list = [card1, card2, card3, card4, card5];
+        let card_list = [card1, card2, card3, card4, card5, card6];
 
         var AnswerInput = document.querySelector('#answerIn');
 		var AnswerInput2 = document.querySelector('#answerIn2');
 		var AnswerInput3 = document.querySelector('#answerIn3');
+		var AnswerInput4 = document.querySelector('#answerIn4');
 
         // next function
         let counter = 1;
@@ -355,11 +398,15 @@ a {
 			else if (x == 4) {
                 container.style.background = "#e8672e"
             }
+			else if (x == 5) {
+                container.style.background = "#e8672e"
+            }
         }
 
         var password  = "개구리";
 		var password2 = "자라";
 		var password3 = "기린";
+		var password4 = "꿩";
         function QnAnswer(){
             
             if(AnswerInput.value == password){
@@ -385,6 +432,17 @@ a {
 		function QnAnswer3(){
             
             if(AnswerInput3.value == password3){
+                next();
+            }else{
+                var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
+                alert(wrongResult);
+            }
+
+        }
+		
+		function QnAnswer4(){
+            
+            if(AnswerInput4.value == password4){
                 next();
             }else{
                 var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
