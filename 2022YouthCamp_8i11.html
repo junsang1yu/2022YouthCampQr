@@ -359,6 +359,11 @@ a {
         let counter = 1;
         function next() {
             console.log("next:" + counter)
+			if (AnswerInput.value = "") {
+			 var wrongResult = "1번 문제를 풀어야 진행이 가능합니다.";
+                alert(wrongResult);
+			}
+			
             if (counter < card_length.length) {
                 card_list[counter].classList.add("active");
                 backgroundFunc(counter);
