@@ -360,7 +360,7 @@ a {
         let counter = 1;
         function next() {
             console.log("next:" + counter)
-			if (AnswerInput.value == "") {
+			if (counter == 1) {
 			 var wrongResult = "오 벌써 마지막 도토리를 찾으셨군요! 마지막 화이팅을 외쳐 봅시다^^ 화이팅!!";
                 alert(wrongResult);
 			}
@@ -413,11 +413,14 @@ a {
 		var password2 = "수박";
 		var password3 = "melon";
 		var password4 = "아보카도";
+		var rightResult = "정답입니다 :)";
 		
         function QnAnswer(){
             
             if(AnswerInput.value == password){
+                alert(rightResult);
                 next();
+				AnswerInput.value = "";
             }else{
                 var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
                 alert(wrongResult);
@@ -428,7 +431,9 @@ a {
 		function QnAnswer2(){
             
             if(AnswerInput2.value == password2){
+                alert(rightResult);
                 next();
+				AnswerInput2.value = "";
             }else{
                 var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
                 alert(wrongResult);
@@ -439,7 +444,9 @@ a {
 		function QnAnswer3(){
             
             if(AnswerInput3.value == password3){
+                alert(rightResult);
                 next();
+				AnswerInput3.value = "";
             }else{
                 var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
                 alert(wrongResult);
@@ -450,6 +457,7 @@ a {
 		function QnAnswer4(){
             
             if(AnswerInput4.value == password4){
+				alert(rightResult);
                 next();
             }else{
                 var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
