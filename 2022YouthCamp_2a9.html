@@ -368,6 +368,7 @@ a {
             
             if(AnswerInput.value == password){
                 next();
+				AnswerInput.value = "";
             }else{
                 var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
                 alert(wrongResult);
