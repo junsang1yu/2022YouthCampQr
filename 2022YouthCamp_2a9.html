@@ -363,11 +363,11 @@ a {
         var password  = "소풍";
 		var password2 = "병아리";
 		var password3 = "개나리";
+		var rightResult = "정답입니다 :)";
         function QnAnswer(){
             
             if(AnswerInput.value == password){
-				var wrongResult = "정답입니다! :)";
-                alert(wrongResult);
+                alert(rightResult);
 				AnswerInput.value = "";
                 next();
             }else{
