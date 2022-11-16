@@ -149,7 +149,7 @@ a {
     background: #f6f6f6;
     transform: translateX(-50%) scale(2);
     margin: -1200px;
-    transition: 0.4s;
+    transition: 1.4s;
 }
 .card_3 .image {
     background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_1_2.jpg?raw=true");
@@ -367,6 +367,7 @@ a {
             
             if(AnswerInput.value == password){
 				var wrongResult = "정답입니다! :)";
+				AnswerInput.value = "";
                 alert(wrongResult);
                 next();
             }else{
