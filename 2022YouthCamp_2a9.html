@@ -149,7 +149,7 @@ a {
     background: #f6f6f6;
     transform: translateX(-50%) scale(2);
     margin: -1200px;
-    transition: 0.1s;
+    transition: 1.4s;
 }
 .card_3 .image {
     background-image: url("https://github.com/junsang1yu/2022YouthCampQr/blob/main/QR1_1_2.jpg?raw=true");
@@ -366,6 +366,8 @@ a {
         function QnAnswer(){
             
             if(AnswerInput.value == password){
+				var wrongResult = "정답입니다! :)";
+                alert(wrongResult);
                 next();
             }else{
                 var wrongResult = "정답이 아닙니다!\n **띄어쓰기는 없습니다**";
